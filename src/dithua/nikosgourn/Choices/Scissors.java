@@ -1,17 +1,19 @@
 package dithua.nikosgourn.Choices;
 
+import dithua.nikosgourn.Main;
+
 public class Scissors extends Choice{
 
 
     @Override
     public void gameResult(Choice otherChoice) {
         if (otherChoice instanceof Paper){
-            System.out.println("You Win!");
+            Main.gameCondition.setText("You Win!");
         }
         else if (otherChoice instanceof Rock)
         {
-            System.out.println("You Lose!");
+            Main.gameCondition.setText("You Lose!");
         }
-        else System.out.println("Tie!");
+        else Main.gameCondition.setText("Tie!");
     }
 }
